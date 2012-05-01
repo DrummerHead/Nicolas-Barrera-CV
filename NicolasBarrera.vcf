@@ -1,0 +1,16 @@
+BEGIN:VCARD
+PRODID:-//kaply.com//Operator 0.8//EN
+SOURCE:http://nicolas-barrera.com/
+NAME:Nicolas Barrera - Web Designer
+VERSION:3.0
+N;CHARSET=UTF-8:Barrera;Nicolas;;;
+FN;CHARSET=UTF-8:Nicolas Barrera
+BDAY:1985-11-03
+UID:
+URL:http://nicolas-barrera.com/
+EMAIL: drummerhead@gmail.com
+ADR;CHARSET=UTF-8:;;;Montevideo;;;Uruguay
+TEL;TYPE=cell:099117169
+TEL;TYPE=home:4083800
+NICKNAME;CHARSET=UTF-8:DrummerHead
+END:VCARD

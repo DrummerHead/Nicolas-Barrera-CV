@@ -1,0 +1,5 @@
+Options -Indexes
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.nicolas-barrera.com [NC]
+RewriteRule ^(.*)$ http://nicolas-barrera.com/$1 [L,R=301]
