@@ -1,0 +1,46 @@
+/*                                                *\
+ *  Glorious Master CSS by honorable DrummerHead  *
+\*                                                */
+
+
+/*  -- - -  -   -     -        -             -                     -
+\*  Baseline  */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+html {
+  font-size: 100%;
+  font-family: Georgia, serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*  /Baseline  */
+
+
+/*  -- - -  -   -     -        -             -                     -
+\*  Modular Elements  */
+
+.vessel {
+  max-width: 65em;
+  padding: 0 2em;
+  margin: 0 auto;
+}
+
+
+/*  /Modular Elements  */
