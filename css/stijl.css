@@ -1,0 +1,144 @@
+/*                                                *\
+ *  Glorious Master CSS by honorable DrummerHead  *
+\*                                                */
+
+
+
+
+/*  - - - - - - - - - - - - - - - - - - - - -
+\*  Baseline  */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+html {
+  font-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #272525;
+  background-color: #f2f1f1;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+a {
+  color: #467c89;
+}
+a:focus {
+  outline: dotted;
+}
+a:hover {
+  outline: 0;
+  color: #63a1b0;
+}
+a:active {
+  outline: 0;
+  color: #2f535c;
+}
+
+
+/*  /Baseline  */
+
+
+
+
+/*  - - - - - - - - - - - - - - - - - - - - -
+\*  Modular Constructs  */
+
+.vessel {
+  max-width: 65em;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
+
+
+
+
+.print {
+  display: none;
+}
+/*  /Modular Constructs  */
+
+
+
+
+/*  - - - - - - - - - - - - - - - - - - - - -
+\*  Landing specific  */
+
+[role='banner'] {
+  background-color: #161414;
+  color: #f2f1f1;
+  padding: .4em 0;
+}
+[role='banner'] h1 {
+  margin: .25em 0;
+  line-height: 1;
+  font-weight: 600;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+[role='banner'] h2 {
+  margin: .4em 0;
+  line-height: 1.2;
+}
+[role='banner'] aside {
+  margin: .4em 0;
+}
+[role='banner'] a {
+  color: #f2f1f1;
+  margin: .25em 0;
+  line-height: 1.25;
+}
+
+/*  /Landing specific  */
+
+
+
+
+/*  - - - - - - - - - - - - - - - - - - - - -
+\*  Media Queries  */
+
+/*  /Media Queries  */
+
+
+
+
+/*  - - - - - - - - - - - - - - - - - - - - -
+\*  Print  */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    box-shadow:none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  .print {
+  }
+}
+/*  /Print  */
