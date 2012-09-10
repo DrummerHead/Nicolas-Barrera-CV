@@ -60,15 +60,16 @@ h2 {
   border-bottom: 1px solid #b1abab;
 }
 ul {
-  margin: 1em 0;
+  margin: 0 0 .5em 0;
   padding: 0 0 0 .86em;
 }
-ul ul {
-  margin: 0;
+ul > li {
+  margin: 0 0 .1em;
 }
 small {
-  font-size: .8em;
   display: block;
+  margin: .4em 0;
+  font-size: .8em;
 }
 
 
@@ -96,6 +97,24 @@ h2 a:hover {
 h2 a:hover:after {
   content: " #";
 }
+section aside {
+  overflow: hidden;
+  -webkit-transition: max-height ease-in 777ms;
+     -moz-transition: max-height ease-in 777ms;
+       -o-transition: max-height ease-in 777ms;
+          transition: max-height ease-in 777ms;
+}
+.collapsed {
+  max-height: 2em;
+  background-color: teal;
+}
+.opened {
+  max-height: 50em;
+  background-color: yellow;
+}
+.expander {
+}
+
 
 
 
@@ -110,9 +129,10 @@ h2 a:hover:after {
 
 
 /*  - - - - - - - - - - - - - - - - - - - - -
-\*  Landing specific  */
+\*  Promiscuous structures  */
 
-[role='banner'] {
+[role='banner'],
+[role='contentinfo'] {
   background-color: #161414;
   color: #f2f1f1;
   padding: .4em 0;
@@ -136,6 +156,14 @@ h2 a:hover:after {
   margin: .25em 0;
   line-height: 1.25;
 }
+/*  /Promiscuous structures  */
+
+
+
+
+/*  - - - - - - - - - - - - - - - - - - - - -
+\*  Landing specific  */
+
 
 /*  /Landing specific  */
 
