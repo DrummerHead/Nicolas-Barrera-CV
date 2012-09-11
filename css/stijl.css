@@ -59,20 +59,15 @@ h6 {
 h2 {
   border-bottom: 1px solid #b1abab;
 }
-ul {
+ul,
+ol {
   margin: 0 0 .5em 0;
   padding: 0 0 0 .86em;
 }
-ul > li {
+ul > li,
+ol > li {
   margin: 0 0 .1em;
 }
-small {
-  display: block;
-  margin: .4em 0;
-  font-size: .8em;
-}
-
-
 /*  /Baseline  */
 
 
@@ -134,8 +129,6 @@ section aside:after {
   background:     -ms-linear-gradient(top, rgba(242,241,241,0) 0%, rgba(242,241,241,1) 100%);
   background:      -o-linear-gradient(top, rgba(242,241,241,0) 0%, rgba(242,241,241,1) 100%);
   background:         linear-gradient(to bottom, rgba(242,241,241,0) 0%, rgba(242,241,241,1) 100%);
-
-
 }
 .collapsed {
   max-height: 2.6em;
@@ -153,8 +146,22 @@ section aside:after {
   background-color: #eaf2f4;
   color: #3b6873;
 }
-
-
+.showcase {
+  list-style-type: none;
+  padding: 0;
+}
+.showcase li {
+  margin: 1.5em 0;
+}
+.showcase p {
+  margin: 0;
+}
+.showcase p:last-child {
+  color: #6e6666;
+}
+.showcase small {
+  display: block;
+}
 
 
 
