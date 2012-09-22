@@ -53,9 +53,12 @@ h2 {
   font-weight: 300;
 }
 h2 {
+  font-size: 1.8em;
   border-bottom: 1px solid #b1abab;
 }
 h3 {
+  margin: 1.5em 0 .5em;
+  font-size: 1.4em;
   font-weight: normal;
 }
 em {
@@ -198,7 +201,7 @@ section aside:after {
 [role='contentinfo'] {
   background-color: #161414;
   color: #f2f1f1;
-  padding: .4em 0;
+  padding: .4em 0 .6em;
 }
 [role='banner'] h1 {
   margin: .25em 0;
@@ -208,6 +211,7 @@ section aside:after {
 }
 [role='banner'] h2 {
   margin: .4em 0;
+  font-size: 1.5em;
   line-height: 1.2;
   border: none;
 }
