@@ -2,7 +2,7 @@ require 'webrick'
 include WEBrick
 
 local_magia = HTTPServer.new(
-  :Port => 8070,
+  :Port => 7070,
   :DocumentRoot => "."
 )
 

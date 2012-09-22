@@ -48,16 +48,18 @@ a:active {
   color: #2f535c;
 }
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }
 h2 {
   border-bottom: 1px solid #b1abab;
+}
+h3 {
+  font-weight: normal;
+}
+em {
+  color: #6e6666;
 }
 ul,
 ol {
@@ -68,6 +70,21 @@ ul > li,
 ol > li {
   margin: 0 0 .1em;
 }
+dl {
+  margin: 0 0 1.5em 0;
+}
+dt {
+  display: block;
+  font-size: .8em;
+  line-height: 1;
+  color: #4b4646;
+}
+dd {
+  display: block;
+  margin: 0 0 .5em 0;
+}
+
+
 /*  /Baseline  */
 
 
