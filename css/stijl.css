@@ -33,6 +33,15 @@ body {
   font-size: 1em;
   line-height: 1.4;
 }
+a,
+strong,
+em {
+  -webkit-transition: 0.25s linear all;
+     -moz-transition: 0.25s linear all;
+      -ms-transition: 0.25s linear all;
+       -o-transition: 0.25s linear all;
+          transition: 0.25s linear all;
+}
 a {
   color: #467c89;
 }
@@ -182,6 +191,34 @@ section aside:after {
 .showcase small {
   display: block;
 }
+.link-hub {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.link-hub li {
+}
+.link-hub a {
+  color: #908888;
+  text-decoration: none;
+  border-bottom: 1px dotted #161414;
+}
+.link-hub a:hover {
+  color: #a7cad2;
+  border-color: #a7cad2;
+}
+.link-hub strong {
+  font-weight: normal;
+}
+.link-hub a:hover strong {
+}
+.link-hub em {
+  color: #f2f1f1;
+  font-style: normal;
+}
+.link-hub a:hover em {
+  color: #a7cad2;
+}
 
 
 
@@ -225,6 +262,16 @@ section aside:after {
 }
 [role='main'] {
   padding: 1em 0;
+}
+[role='contentinfo'] {
+  padding: .8em 0 1em;
+  font-size: 1.2em;
+}
+#copyright {
+  margin: 1em 0 .4em;
+  color: #040404;
+  text-shadow: 0 -1px 0 #272525, -1px 0 0 rgba(39, 37, 37, .5);
+  cursor: default;
 }
 
 /*  /Promiscuous structures  */
