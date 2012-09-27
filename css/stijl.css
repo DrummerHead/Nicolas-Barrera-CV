@@ -106,9 +106,22 @@ dd {
 \*  Modular Constructs  */
 
 .vessel {
-  max-width: 65em;
   padding: 0 1em;
   margin: 0 auto;
+  position: relative;
+  -webkit-transition: 1s linear padding;
+     -moz-transition: 1s linear padding;
+      -ms-transition: 1s linear padding;
+       -o-transition: 1s linear padding;
+          transition: 1s linear padding;
+}
+.vessel:before,
+.vessel:after {
+  content: '';
+  display: table;
+}
+.vessel:after {
+  clear: both;
 }
 h2 a {
   color: inherit;
@@ -290,7 +303,52 @@ section aside:after {
 
 /*  - - - - - - - - - - - - - - - - - - - - -
 \*  Media Queries  */
+@media (min-width: 600px){
+  .vessel {
+    padding: 0 6% 0 5%;
+  }
+}
 
+@media (min-width: 870px){
+  body {
+    font-size: 1.2em;
+  }
+  #copyright {
+    position: absolute;
+    right: 6%;
+    bottom: 0;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1160px){
+  .vessel {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 1470px){
+  .vessel {
+    padding: 0 4%;
+  }
+  section {
+    float: left;
+    width: 48%;
+  }
+  section:nth-child(2n+1) {
+    clear: left;
+    margin-right: 4%;
+  }
+  .expander {
+    display: none;
+  }
+  .collapsed {
+    max-height: 50em;
+  }
+  aside p:first-child {
+    margin-top: 0;
+  }
+}
 /*  /Media Queries  */
 
 
