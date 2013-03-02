@@ -84,6 +84,8 @@ ol > li {
 }
 dl {
   margin: 0 0 1.5em 0;
+  border-left: .5em solid #d2cece;
+  padding: 0 0 0 .5em;
 }
 dt {
   display: block;
