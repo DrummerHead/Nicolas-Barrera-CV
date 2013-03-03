@@ -309,6 +309,12 @@ section aside:after {
   .vessel {
     padding: 0 6% 0 5%;
   }
+  .expander {
+    display: none;
+  }
+  .collapsed {
+    max-height: 50em;
+  }
 }
 
 @media (min-width: 870px){
@@ -341,12 +347,6 @@ section aside:after {
     clear: left;
     margin-right: 4%;
   }
-  .expander {
-    display: none;
-  }
-  .collapsed {
-    max-height: 50em;
-  }
   aside p:first-child {
     margin-top: 0;
   }
@@ -362,15 +362,13 @@ section aside:after {
 @media print {
   * {
     background: transparent !important;
-    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    color: #000 !important;
     box-shadow:none !important;
     text-shadow: none !important;
   }
   a,
   a:visited {
     text-decoration: underline;
-  }
-  .print {
   }
 }
 /*  /Print  */
