@@ -414,6 +414,12 @@ section aside:after {
   section aside:after {
     background: transparent;
   }
+  #dh-logo {
+    width: 2cm;
+    position: absolute;
+    right: .2em;
+    top: .7em;
+  }
   dl,
   .showcase li {
     page-break-inside: avoid;
