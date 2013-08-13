@@ -281,7 +281,8 @@ section aside:after {
   line-height: 1.25;
 }
 #download-pdf {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   right: 8%;
   top: -0.4em;
@@ -375,7 +376,8 @@ section aside:after {
     padding-left: .1em;
   }
   #download-pdf {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
