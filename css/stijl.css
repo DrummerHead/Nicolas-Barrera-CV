@@ -352,9 +352,11 @@ section aside:after {
   section aside:after {
     background: transparent;
   }
+  section aside {
+    margin-top: 1.75em;
+  }
   .collapsed {
     max-height: 50em;
-    margin-top: 1.75em;
   }
   .two-columns {
     -webkit-column-count: 2;
@@ -374,6 +376,11 @@ section aside:after {
   }
   ul.two-columns > li{
     padding-left: .1em;
+    -webkit-column-break-inside: avoid;
+       -moz-column-break-inside: avoid;
+        -ms-column-break-inside: avoid;
+         -o-column-break-inside: avoid;
+                   break-inside: avoid;
   }
   #download-pdf {
     visibility: visible;
