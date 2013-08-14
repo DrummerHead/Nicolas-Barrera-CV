@@ -153,6 +153,9 @@ section:after {
   color: #d2cece;
   text-align: center;
 }
+section:last-child:after {
+  content: '';
+}
 section aside {
   overflow: hidden;
   position: relative;
@@ -313,6 +316,8 @@ section aside:after {
 [role='main'] {
   display: block;
   padding: 1em 0;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 }
 
 [role='contentinfo'] {
@@ -428,6 +433,9 @@ section aside:after {
   .vessel {
     padding: 0 4%;
   }
+  [role='main'] {
+    background-image: url(/img/pixel-halftone.png);
+  }
   section {
     float: left;
     width: 48%;
@@ -435,6 +443,9 @@ section aside:after {
   section:nth-child(2n+1) {
     clear: left;
     margin-right: 4%;
+  }
+  section:nth-child(5):after {
+    content: '';
   }
   aside p:first-child {
     margin-top: 0;
