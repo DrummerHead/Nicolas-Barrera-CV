@@ -14,3 +14,6 @@
 .*.sw[a-z]
 *.un~
 Session.vim
+
+## custom
+/pdf-test
