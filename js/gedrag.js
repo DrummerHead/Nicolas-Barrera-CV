@@ -1,7 +1,4 @@
 'use strict';
-document.addEventListener("DOMContentLoaded", function(event) {
-
-
 
 
 // Helper functions
@@ -28,16 +25,6 @@ var remove = function(el){
 }
 
 
-// Initial vars
-var $asides = $('section aside');
-var $elapsed = $('#elapsed');
-var expander = document.createElement('a');
-var expanderText = document.createTextNode('Read More');
-expander.appendChild(expanderText);
-expander.setAttribute('href', '#');
-expander.setAttribute('class', 'expander');
-
-
 // Expander behavior
 var expand = function(e){
   e.preventDefault();
@@ -48,19 +35,10 @@ var expand = function(e){
 }
 
 
-// Add expander after each Aside
-each($asides, function(el){
-  el.classList.add('collapsed');
-  var $expander = expander.cloneNode(true);
-  $expander.addEventListener('click', expand);
-  el.parentNode.appendChild($expander);
-});
-
-
 // Time elapsed in current job
 var miliInAMonth = 2629741666;
 
-var currentJobStartDate = new Date(2010, 8, 1).getTime();
+var currentJobStartDate = new Date(2005, 12, 1).getTime();
 var today = new Date().getTime();
 var elapsed = today - currentJobStartDate;
 
@@ -75,9 +53,32 @@ var dateToString = function(date, string){
 
 var elapsedString = dateToString(elapsedYears, 'year') + ' ' + dateToString(elapsedMonths, 'month');
 
-$elapsed[0].textContent = elapsedString;
+
+// Wait for DOM load
+document.addEventListener("DOMContentLoaded", function(event) {
+
+  // Initial vars
+  var $asides = $('section aside');
+  var $elapsed = $('#elapsed');
+  var expander = document.createElement('a');
+  var expanderText = document.createTextNode('Read More');
+  expander.appendChild(expanderText);
+  expander.setAttribute('href', '#');
+  expander.setAttribute('class', 'expander');
 
 
+  // Add expander after each Aside
+  each($asides, function(el){
+    el.classList.add('collapsed');
+    var $expander = expander.cloneNode(true);
+    $expander.addEventListener('click', expand);
+    el.parentNode.appendChild($expander);
+  });
 
+
+  // Inject elapsed time string
+  if($elapsed.length){
+    $elapsed[0].textContent = elapsedString;
+  }
 
 });
