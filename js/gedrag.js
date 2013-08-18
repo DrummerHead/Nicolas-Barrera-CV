@@ -1,35 +1,66 @@
-Zepto(function($){
+'use strict';
+document.addEventListener("DOMContentLoaded", function(event) {
 
 
+
+
+// Helper functions
+var $ = function(el){
+  return document.body.querySelectorAll(el);
+}
+var each = function(el, func){
+  for(var i = 0; i < el.length; i++){
+    var I = el.item(i);
+    func(I);
+  }
+}
+var previous = function(el){
+  var sista = el.previousSibling;
+  while(sista.nodeType !== 1){
+    sista = sista.previousSibling;
+  }
+  return sista;
+}
+var remove = function(el){
+  if (el.parentNode) {
+    el.parentNode.removeChild(el);
+  }
+}
 
 
 // Initial vars
 var $asides = $('section aside');
-var $expander = "<a href='#' class='expander'>Read More</a>";
 var $elapsed = $('#elapsed');
+var expander = document.createElement('a');
+var expanderText = document.createTextNode('Read More');
+expander.appendChild(expanderText);
+expander.setAttribute('href', '#');
+expander.setAttribute('class', 'expander');
 
 
-// Collapsing aside
-$asides.each(function(){
-  var me = $(this);
-  me.addClass('collapsed');
-  me.after($expander);
-});
-
-
-// Behaviour for .expander trigger
-$('section').on('click', '.expander', function(e){
+// Expander behavior
+var expand = function(e){
   e.preventDefault();
-  var me = $(this);
-  me.prev().removeClass('collapsed').addClass('opened');
-  me.remove();
+  var $aside = previous(this);
+  $aside.classList.remove('collapsed');
+  $aside.classList.add('opened');
+  remove(this);
+}
+
+
+// Add expander after each Aside
+each($asides, function(el){
+  el.classList.add('collapsed');
+  var $expander = expander.cloneNode(true);
+  $expander.addEventListener('click', expand);
+  el.parentNode.appendChild($expander);
 });
 
 
 // Time elapsed in current job
 var miliInAMonth = 2629741666;
 
-var currentJobStartDate = new Date(2012, 8, 1).getTime();
+var currentJobStartDate = new Date(2010, 8, 1).getTime();
 var today = new Date().getTime();
 var elapsed = today - currentJobStartDate;
 
@@ -44,9 +75,9 @@ var dateToString = function(date, string){
 
 var elapsedString = dateToString(elapsedYears, 'year') + ' ' + dateToString(elapsedMonths, 'month');
 
-$elapsed.text(elapsedString);
+$elapsed[0].textContent = elapsedString;
 
 
 
 
-})
+});
