@@ -97,8 +97,6 @@ dd {
   display: block;
   margin: 0 0 .5em 0;
 }
-
-
 /*  /Baseline  */
 
 
@@ -330,7 +328,6 @@ section aside:after {
   text-shadow: 0 -1px 0 #272525, -1px 0 0 rgba(39, 37, 37, .5);
   cursor: default;
 }
-
 /*  /Promiscuous structures  */
 
 
@@ -347,6 +344,7 @@ section aside:after {
 
 /*  - - - - - - - - - - - - - - - - - - - - -
 \*  Media Queries  */
+
 @media (min-width: 600px){
   .vessel {
     padding: 0 6% 0 5%;
@@ -486,6 +484,9 @@ section aside:after {
   .vessel {
     padding: 0 .2em;
   }
+  section {
+    padding-bottom: 2.4em;
+  }
   section:after {
     content: '';
     height: auto;
@@ -510,7 +511,8 @@ section aside:after {
     font-size: .8em;
     padding: 0;
   }
-  .screen {
+  .screen,
+  #attendee {
     display: none !important;
   }
   .print {
