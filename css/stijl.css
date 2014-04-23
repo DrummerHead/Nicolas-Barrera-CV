@@ -138,21 +138,7 @@ h2:first-child {
   margin-top: 0;
 }
 section {
-  padding: .1em 0 1em;
-}
-section:after {
-  content: '\2026';
-  display: block;
-  height: .6em;
-  font-size: 4em;
-  line-height: .05em;
-  overflow: hidden;
-  font-family: Georgia, serif;
-  color: #d2cece;
-  text-align: center;
-}
-section:last-child:after {
-  content: '';
+  padding: .75em 0 1.25em;
 }
 section aside {
   overflow: hidden;
@@ -442,9 +428,6 @@ section aside:after {
     clear: left;
     margin-right: 4%;
   }
-  section:nth-child(5):after {
-    content: '';
-  }
   aside p:first-child {
     margin-top: 0;
   }
@@ -486,10 +469,6 @@ section aside:after {
   }
   section {
     padding-bottom: 2.4em;
-  }
-  section:after {
-    content: '';
-    height: auto;
   }
   section aside:after {
     background: transparent;
