@@ -490,8 +490,7 @@ section aside:after {
     font-size: .8em;
     padding: 0;
   }
-  .screen,
-  #attendee {
+  .screen {
     display: none !important;
   }
   .print {
