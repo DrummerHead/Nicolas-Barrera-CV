@@ -182,6 +182,24 @@ section aside:after {
   background-color: #eaf2f4;
   color: #3b6873;
 }
+
+ul.two-columns {
+  box-sizing: border-box;
+  padding: 0;
+  list-style-position: inside;
+}
+ul.two-columns > li {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 1em 0 .1em;
+}
+ul.two-columns > li:before {
+  content: '\25cf';
+  margin: 0 0.4em 0 0;
+  vertical-align: calc(.055em);
+}
+
 .showcase {
   list-style-type: none;
   padding: 0;
@@ -347,24 +365,24 @@ section aside:after {
   .collapsed {
     max-height: 50em;
   }
-  .two-columns {
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-        -ms-column-count: 2;
-         -o-column-count: 2;
-            column-count: 2;
-    -webkit-column-gap: 2em;
-       -moz-column-gap: 2em;
-        -ms-column-gap: 2em;
-         -o-column-gap: 2em;
-            column-gap: 2em;
+  .two-columns:before,
+  .two-columns:after {
+    content: '';
+    display: table;
   }
-  ul.two-columns {
-    padding: 0;
-    list-style-position: inside;
+  .two-columns:after {
+    clear: both;
   }
-  ul.two-columns > li{
-    padding-left: .1em;
+  ul.two-columns > li {
+    float: left;
+    clear: left;
+    width: 50%;
+  }
+  ul.two-columns > li.right-aligned-ahead,
+  ul.two-columns > li.right-aligned-ahead + li ,
+  ul.two-columns > li.right-aligned-ahead + li + li,
+  ul.two-columns > li.right-aligned-ahead + li + li + li {
+    float: none;
   }
   #download-pdf {
     visibility: visible;
