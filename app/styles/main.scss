@@ -1,9 +1,5 @@
-/*                                                *\
- *  Glorious Master CSS by honorable DrummerHead  *
-\*                                                */
-
-
-
+// bower:scss
+// endbower
 
 /*  - - - - - - - - - - - - - - - - - - - - -
 \*  Baseline  */
@@ -298,7 +294,7 @@ ul.two-columns > li:before {
   line-height: 1;
   font-weight: bold;
   text-decoration: none;
-  background-image: url(/img/file.png);
+  background-image: url(/images/file.png);
   background-repeat: no-repeat;
   background-position: .1em .1em;
   background-size: 26px auto;
@@ -436,7 +432,7 @@ ul.two-columns > li:before {
     padding: 0 4%;
   }
   [role='main'] {
-    background-image: url(/img/pixel-halftone.png);
+    background-image: url(/images/pixel-halftone.png);
   }
   section {
     float: left;

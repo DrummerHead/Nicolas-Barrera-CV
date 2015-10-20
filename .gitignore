@@ -1,5 +1,4 @@
 ## OSX.gitignore
-
 .DS_Store
 
 # Thumbnails
@@ -9,11 +8,18 @@
 .Spotlight-V100
 .Trashes
 
-
 ## vim.gitignore
 .*.sw[a-z]
 *.un~
 Session.vim
+
+## Yeoman
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+test/bower_components
 
 ## custom
 /pdf-test

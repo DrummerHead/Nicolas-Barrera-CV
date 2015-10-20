@@ -5,19 +5,19 @@
 //
 var $ = function(selector){
   return Array.prototype.slice.call(document.querySelectorAll(selector));
-}
+};
 var previous = function(el){
   var sista = el.previousSibling;
   while(sista.nodeType !== 1){
     sista = sista.previousSibling;
   }
   return sista;
-}
+};
 var remove = function(el){
   if (el.parentNode) {
     el.parentNode.removeChild(el);
   }
-}
+};
 
 
 // Expander behavior
@@ -28,7 +28,7 @@ var expand = function(e){
   $aside.classList.remove('collapsed');
   $aside.classList.add('opened');
   remove(this);
-}
+};
 
 
 // Time elapsed in current job
@@ -49,12 +49,12 @@ var calculateElapsed = function(startDate){
   };
 
   return dateToString(elapsedYears, 'year') + ' ' + dateToString(elapsedMonths, 'month');
-}
+};
 
 
 // Wait for DOM load
 //
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener('DOMContentLoaded', function() {
 
   // Initial vars
   var $asides = $('section aside');
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // Inject elapsed time string
   if($elapsed.length){
-    $elapsed[0].textContent = calculateElapsed($elapsed[0].getAttribute("data-started"));
+    $elapsed[0].textContent = calculateElapsed($elapsed[0].getAttribute('data-started'));
   }
 
 });
