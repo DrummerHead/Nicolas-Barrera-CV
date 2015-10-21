@@ -1,10 +1,6 @@
 .collapsed {
   max-height: 2.6em;
-  -webkit-transition: 1s ease-in-out max-height;
-     -moz-transition: 1s ease-in-out max-height;
-      -ms-transition: 1s ease-in-out max-height;
-       -o-transition: 1s ease-in-out max-height;
-          transition: 1s ease-in-out max-height;
+  transition: 1s ease-in-out max-height;
 }
 .opened {
   max-height: 50em;

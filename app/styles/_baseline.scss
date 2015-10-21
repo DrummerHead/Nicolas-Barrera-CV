@@ -16,8 +16,7 @@ html {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: $grey-13;
   background-color: $grey-1;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 body {
   margin: 0;
@@ -27,11 +26,7 @@ body {
 a,
 strong,
 em {
-  -webkit-transition: 250ms ease-in-out all;
-     -moz-transition: 250ms ease-in-out all;
-      -ms-transition: 250ms ease-in-out all;
-       -o-transition: 250ms ease-in-out all;
-          transition: 250ms ease-in-out all;
+  transition: 250ms ease-in-out all;
 }
 a {
   color: $cyan-9;

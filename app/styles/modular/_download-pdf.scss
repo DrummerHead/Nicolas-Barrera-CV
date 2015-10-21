@@ -16,14 +16,6 @@
   background-position: .1em .1em;
   background-size: 26px auto;
   color: $grey-2;
-  -webkit-transform: rotate(-90deg);
-     -moz-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-       -o-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transform-origin: 100% 100%;
-     -moz-transform-origin: 100% 100%;
-      -ms-transform-origin: 100% 100%;
-       -o-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
+  transform: rotate(-90deg);
+  transform-origin: 100% 100%;
 }

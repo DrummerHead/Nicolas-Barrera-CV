@@ -2,11 +2,7 @@
   padding: 0 1em;
   margin: 0 auto;
   position: relative;
-  -webkit-transition: 500ms ease-in-out padding;
-     -moz-transition: 500ms ease-in-out padding;
-      -ms-transition: 500ms ease-in-out padding;
-       -o-transition: 500ms ease-in-out padding;
-          transition: 500ms ease-in-out padding;
+  transition: 500ms ease-in-out padding;
 }
 .vessel:before,
 .vessel:after {
