@@ -16,7 +16,9 @@ html {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: $grey-13;
   background-color: $grey-1;
+  text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 body {
   margin: 0;
