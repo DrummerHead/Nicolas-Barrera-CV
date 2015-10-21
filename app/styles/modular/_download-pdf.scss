@@ -1,0 +1,29 @@
+#download-pdf {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 2%;
+  top: -2.5em;
+  width: 5.5em;
+  padding: .1em 0 .1em 2.2em;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1;
+  font-weight: bold;
+  text-decoration: none;
+  background-image: url(/images/file.png);
+  background-repeat: no-repeat;
+  background-position: .1em .1em;
+  background-size: 26px auto;
+  color: #ddd;
+  -webkit-transform: rotate(-90deg);
+     -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+       -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 100% 100%;
+     -moz-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+       -o-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}

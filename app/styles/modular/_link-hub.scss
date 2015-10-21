@@ -1,0 +1,28 @@
+.link-hub {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.link-hub li {
+}
+.link-hub a {
+  color: #908888;
+  text-decoration: none;
+  border-bottom: 1px dotted #161414;
+}
+.link-hub a:hover {
+  color: #a7cad2;
+  border-color: #a7cad2;
+}
+.link-hub strong {
+  font-weight: normal;
+}
+.link-hub a:hover strong {
+}
+.link-hub em {
+  color: #f2f1f1;
+  font-style: normal;
+}
+.link-hub a:hover em {
+  color: #a7cad2;
+}

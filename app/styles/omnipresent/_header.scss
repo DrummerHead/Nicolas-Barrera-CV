@@ -1,0 +1,26 @@
+[role='banner'],
+[role='contentinfo'] {
+  background-color: #161414;
+  color: #f2f1f1;
+  padding: .4em 0 .6em;
+}
+[role='banner'] h1 {
+  margin: .25em 0;
+  line-height: 1;
+  font-weight: 600;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+[role='banner'] h2 {
+  margin: .4em 0;
+  font-size: 1.5em;
+  line-height: 1.2;
+  border: none;
+}
+[role='banner'] aside {
+  margin: .4em 0;
+}
+[role='banner'] a {
+  color: #f2f1f1;
+  margin: .25em 0;
+  line-height: 1.25;
+}

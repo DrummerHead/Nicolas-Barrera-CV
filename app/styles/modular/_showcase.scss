@@ -1,0 +1,16 @@
+.showcase {
+  list-style-type: none;
+  padding: 0;
+}
+.showcase li {
+  margin: 1.5em 0;
+}
+.showcase p {
+  margin: 0;
+}
+.showcase p:last-child {
+  color: #6e6666;
+}
+.showcase small {
+  display: block;
+}
