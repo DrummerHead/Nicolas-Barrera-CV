@@ -4,7 +4,7 @@ h2 a {
   display: block;
 }
 h2 a:hover {
-  color: #6e6666;
+  color: $grey-9;
 }
 h2 a:hover:after {
   content: " #";

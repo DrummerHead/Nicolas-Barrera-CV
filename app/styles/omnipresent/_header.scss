@@ -1,7 +1,7 @@
 [role='banner'],
 [role='contentinfo'] {
-  background-color: #161414;
-  color: #f2f1f1;
+  background-color: $grey-14;
+  color: $grey-1;
   padding: .4em 0 .6em;
 }
 [role='banner'] h1 {
@@ -20,7 +20,7 @@
   margin: .4em 0;
 }
 [role='banner'] a {
-  color: #f2f1f1;
+  color: $grey-1;
   margin: .25em 0;
   line-height: 1.25;
 }

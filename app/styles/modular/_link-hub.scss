@@ -6,13 +6,13 @@
 .link-hub li {
 }
 .link-hub a {
-  color: #908888;
+  color: $grey-7;
   text-decoration: none;
-  border-bottom: 1px dotted #161414;
+  border-bottom: 1px dotted $grey-14;
 }
 .link-hub a:hover {
-  color: #a7cad2;
-  border-color: #a7cad2;
+  color: $cyan-4;
+  border-color: $cyan-4;
 }
 .link-hub strong {
   font-weight: normal;
@@ -20,9 +20,9 @@
 .link-hub a:hover strong {
 }
 .link-hub em {
-  color: #f2f1f1;
+  color: $grey-1;
   font-style: normal;
 }
 .link-hub a:hover em {
-  color: #a7cad2;
+  color: $cyan-4;
 }

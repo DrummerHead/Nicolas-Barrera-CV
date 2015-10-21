@@ -14,8 +14,8 @@ section {
 html {
   font-size: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #272525;
-  background-color: #f2f1f1;
+  color: $grey-13;
+  background-color: $grey-1;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -34,18 +34,18 @@ em {
           transition: 250ms ease-in-out all;
 }
 a {
-  color: #467c89;
+  color: $cyan-9;
 }
 a:focus {
   outline: dotted;
 }
 a:hover {
   outline: 0;
-  color: #63a1b0;
+  color: $cyan-7;
 }
 a:active {
   outline: 0;
-  color: #2f535c;
+  color: $cyan-11;
 }
 h1,
 h2 {
@@ -54,7 +54,7 @@ h2 {
 }
 h2 {
   font-size: 1.8em;
-  border-bottom: 1px solid #b1abab;
+  border-bottom: 1px solid $grey-5;
 }
 h3 {
   margin: 1.5em 0 .5em;
@@ -62,7 +62,7 @@ h3 {
   font-weight: normal;
 }
 em {
-  color: #6e6666;
+  color: $grey-9;
 }
 ul,
 ol {
@@ -75,14 +75,14 @@ ol > li {
 }
 dl {
   margin: 0 0 1.5em 0;
-  border-left: .5em solid #d2cece;
+  border-left: .5em solid $grey-3;
   padding: 0 0 0 .5em;
 }
 dt {
   display: block;
   font-size: .8em;
   line-height: 1;
-  color: #4b4646;
+  color: $grey-11;
 }
 dd {
   display: block;
