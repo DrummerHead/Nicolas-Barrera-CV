@@ -31,16 +31,32 @@
   section aside:after {
     background: transparent;
   }
+  .two-columns-print {
+    column-count: 2;
+    column-gap: 2.75em;
+  }
+  .two-columns-print > * {
+    display: table;
+    -webkit-column-break-inside: avoid;
+        -ms-column-break-inside: avoid;
+            column-break-inside: avoid;
+  }
   #dh-logo {
     width: 2cm;
     position: absolute;
     right: .2em;
     top: .7em;
   }
+  #talks a:after,
+  [role='contentinfo'] a:after {
+    content: '';
+  }
+  /*
   dl,
   .showcase li {
     page-break-inside: avoid;
   }
+  */
   dl {
     margin-bottom: .75em;
   }

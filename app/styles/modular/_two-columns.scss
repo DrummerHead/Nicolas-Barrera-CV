@@ -1,38 +1,26 @@
-ul.two-columns {
-  box-sizing: border-box;
-  padding: 0;
-  list-style-position: inside;
+.two-columns > * {
+  display: table;
+  -webkit-column-break-inside: avoid;
+      -ms-column-break-inside: avoid;
+          column-break-inside: avoid;
 }
-ul.two-columns > li {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0 1em 0 .1em;
+
+.emulate-list {
+  padding-left: 0;
 }
-ul.two-columns > li:before {
+.emulate-list > li:before {
   content: '\25cf';
   margin: 0 0.4em 0 0;
   vertical-align: calc(.055em);
 }
+.emulate-list li ul,
+.emulate-list li ol, {
+  padding-left: 2em;
+}
 
 @media #{$alpha} {
-  .two-columns:before,
-  .two-columns:after {
-    content: '';
-    display: table;
-  }
-  .two-columns:after {
-    clear: both;
-  }
-  ul.two-columns > li {
-    float: left;
-    clear: left;
-    width: 50%;
-  }
-  ul.two-columns > li.right-aligned-ahead,
-  ul.two-columns > li.right-aligned-ahead + li ,
-  ul.two-columns > li.right-aligned-ahead + li + li,
-  ul.two-columns > li.right-aligned-ahead + li + li + li {
-    float: none;
+  .two-columns {
+    column-count: 2;
+    column-gap: 2.75em;
   }
 }
