@@ -4,3 +4,9 @@
   background-repeat: no-repeat;
   background-position: 100% 100%;
 }
+
+@media #{$delta} {
+  [role='main'] {
+    background-image: url(/images/pixel-halftone.png);
+  }
+}

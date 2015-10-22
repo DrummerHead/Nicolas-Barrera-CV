@@ -19,3 +19,26 @@
   transform: rotate(-90deg);
   transform-origin: 100% 100%;
 }
+
+@media #{$alpha} {
+  #download-pdf {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@media #{$bravo} {
+  #download-pdf {
+    right: 4%;
+    top: -1.4em;
+    padding: 1.6em 0 1em 4.5em;
+    font-size: 1.2em;
+    line-height: 1.2;
+    background-position: .5em .5em;
+    background-size: 77px auto;
+    transform: rotate(0) scale(.6);
+  }
+  #download-pdf:hover {
+    top: .2em;
+    transform: rotate(0) scale(1);
+  }
+}

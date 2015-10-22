@@ -44,3 +44,13 @@ $cyan-15: #010202;
 // Absolute colors
 
 $absolute-black: #000;
+
+
+/* Media Breakpoints */
+/* ================= */
+
+$alpha: "(min-width: 600px)";
+$bravo: "(min-width: 870px)";
+$charlie: "(min-width: 1160px)";
+$delta: "(min-width: 1470px)";
+

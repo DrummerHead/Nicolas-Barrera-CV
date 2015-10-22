@@ -15,3 +15,17 @@
   background-color: $cyan-1;
   color: $cyan-10;
 }
+
+@media #{$alpha} {
+  .collapsed {
+    max-height: 50em;
+  }
+  .expander {
+    display: none;
+  }
+}
+@media #{$delta} {
+  aside p:first-child {
+    margin-top: 0;
+  }
+}

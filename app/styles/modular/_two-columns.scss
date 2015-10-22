@@ -14,3 +14,25 @@ ul.two-columns > li:before {
   margin: 0 0.4em 0 0;
   vertical-align: calc(.055em);
 }
+
+@media #{$alpha} {
+  .two-columns:before,
+  .two-columns:after {
+    content: '';
+    display: table;
+  }
+  .two-columns:after {
+    clear: both;
+  }
+  ul.two-columns > li {
+    float: left;
+    clear: left;
+    width: 50%;
+  }
+  ul.two-columns > li.right-aligned-ahead,
+  ul.two-columns > li.right-aligned-ahead + li ,
+  ul.two-columns > li.right-aligned-ahead + li + li,
+  ul.two-columns > li.right-aligned-ahead + li + li + li {
+    float: none;
+  }
+}

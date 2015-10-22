@@ -12,3 +12,19 @@
 .vessel:after {
   clear: both;
 }
+
+@media #{$alpha} {
+  .vessel {
+    padding: 0 6% 0 5%;
+  }
+}
+@media #{$charlie} {
+  .vessel {
+    padding: 0 10%;
+  }
+}
+@media #{$delta} {
+  .vessel {
+    padding: 0 4%;
+  }
+}
