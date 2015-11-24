@@ -55,6 +55,14 @@ gulp.task('html', ['styles'], () => {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('inline-sources', ['html'], () => {
+  return gulp.src('./dist/index.html')
+    .pipe($.inlineSource())
+    .pipe(gulp.dest('./dist'))
+});
+
+gulp.task('delete-inlined-files', ['inline-sources'], del.bind(null, ['./dist/styles', './dist/scripts']));
+
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe($.if($.if.isFile, $.cache($.imagemin({
@@ -156,7 +164,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'inline-sources', 'delete-inlined-files', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
