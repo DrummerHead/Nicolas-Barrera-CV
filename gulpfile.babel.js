@@ -1,4 +1,3 @@
-// generated on 2015-10-20 using generator-gulp-webapp 1.0.3
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
@@ -62,6 +61,12 @@ gulp.task('inline-sources', ['html'], () => {
 });
 
 gulp.task('delete-inlined-files', ['inline-sources'], del.bind(null, ['./dist/styles', './dist/scripts']));
+
+gulp.task('add-html-comment', ['html', 'inline-sources'], () => {
+  return gulp.src('./dist/index.html')
+    .pipe($.replace('<html> ', '<html>\n\n<!-- Source code at https://github.com/DrummerHead/Nicolas-Barrera-CV -->\n\n'))
+    .pipe(gulp.dest('./dist'));
+});
 
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
@@ -164,7 +169,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'inline-sources', 'delete-inlined-files', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'inline-sources', 'delete-inlined-files', 'add-html-comment', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
