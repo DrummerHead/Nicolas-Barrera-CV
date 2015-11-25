@@ -50,7 +50,7 @@ gulp.task('html', ['styles'], () => {
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
-    .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
+    .pipe($.if('*.html', $.minifyHtml({conditionals: true})))
     .pipe(gulp.dest('dist'));
 });
 
@@ -64,7 +64,7 @@ gulp.task('delete-inlined-files', ['inline-sources'], del.bind(null, ['./dist/st
 
 gulp.task('add-html-comment', ['html', 'inline-sources'], () => {
   return gulp.src('./dist/index.html')
-    .pipe($.replace('<html> ', '<html>\n\n<!-- Source code at https://github.com/DrummerHead/Nicolas-Barrera-CV -->\n\n'))
+    .pipe($.replace(/<html> ?/, '<html>\n\n<!-- Source code at https://github.com/DrummerHead/Nicolas-Barrera-CV -->\n\n'))
     .pipe(gulp.dest('./dist'));
 });
 
