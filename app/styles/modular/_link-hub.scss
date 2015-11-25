@@ -4,6 +4,7 @@
   margin: 0;
 }
 .link-hub li {
+  margin: .25em 0;
 }
 .link-hub a {
   color: $grey-7;
@@ -25,4 +26,10 @@
 }
 .link-hub a:hover em {
   color: $cyan-4;
+}
+
+@media #{$bravo} {
+  .link-hub li {
+    margin: inherit;
+  }
 }
