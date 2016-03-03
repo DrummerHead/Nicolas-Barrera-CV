@@ -40,10 +40,25 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
-gulp.task('html', ['styles'], () => {
+gulp.task('html-dates', () => {
+  return gulp.src('./app/index.html')
+    .pipe($.replace('{{experience-years}}', function(){
+      var startDate = new Date('2007-03-01').getTime();
+      var today = new Date().getTime();
+      var diff = new Date(today - startDate);
+      var diffYear = diff.getFullYear() - 1970;
+      return diffYear;
+    }))
+    .pipe($.replace('{{current-year}}', function(){
+      return new Date().getFullYear();
+    }))
+    .pipe(gulp.dest('./.tmp'));
+});
+
+gulp.task('html', ['styles', 'html-dates'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-  return gulp.src('app/*.html')
+  return gulp.src('.tmp/index.html')
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.combineMq()))
@@ -103,7 +118,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts'], () => {
+gulp.task('serve', ['styles', 'fonts', 'html-dates'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -116,12 +131,13 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   });
 
   gulp.watch([
-    'app/*.html',
+    ',tmp/index.html',
     'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('app/index.html', ['html-dates']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
