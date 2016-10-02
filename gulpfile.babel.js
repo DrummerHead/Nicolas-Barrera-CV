@@ -131,7 +131,7 @@ gulp.task('serve', ['styles', 'fonts', 'html-dates'], () => {
   });
 
   gulp.watch([
-    ',tmp/index.html',
+    '.tmp/index.html',
     'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
