@@ -1,20 +1,20 @@
 .two-columns > * {
   display: table;
-  -webkit-column-break-inside: avoid;
-      -ms-column-break-inside: avoid;
-          column-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .emulate-list {
   padding-left: 0;
 }
-.emulate-list > li:before {
+
+.emulate-list > li::before {
+  margin: 0 .4em 0 0;
   content: '\25cf';
-  margin: 0 0.4em 0 0;
   vertical-align: calc(.055em);
 }
+
 .emulate-list li ul,
-.emulate-list li ol, {
+.emulate-list li ol {
   padding-left: 2em;
 }
 
@@ -24,3 +24,4 @@
     column-gap: 2.75em;
   }
 }
+

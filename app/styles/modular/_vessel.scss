@@ -1,16 +1,18 @@
 .vessel {
-  padding: 0 1em;
-  margin: 0 auto;
   position: relative;
+  margin: 0 auto;
+  padding: 0 1em;
   transition: 500ms ease-in-out padding;
-}
-.vessel:before,
-.vessel:after {
-  content: '';
-  display: table;
-}
-.vessel:after {
-  clear: both;
+
+  &::before,
+  &::after {
+    display: table;
+    content: '';
+  }
+
+  &::after {
+    clear: both;
+  }
 }
 
 @media #{$alpha} {
@@ -18,13 +20,16 @@
     padding: 0 6% 0 5%;
   }
 }
+
 @media #{$charlie} {
   .vessel {
     padding: 0 10%;
   }
 }
+
 @media #{$delta} {
   .vessel {
     padding: 0 4%;
   }
 }
+

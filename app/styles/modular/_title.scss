@@ -1,14 +1,17 @@
 h2 a {
-  color: inherit;
-  text-decoration: none;
   display: block;
-}
-h2 a:hover {
-  color: $grey-9;
-}
-h2 a:hover:after {
-  content: " #";
-}
-h2:first-child {
-  margin-top: 0;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: $grey-9;
+
+    &::after {
+      content: ' #';
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
 }

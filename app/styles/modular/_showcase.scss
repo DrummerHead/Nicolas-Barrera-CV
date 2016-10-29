@@ -1,16 +1,21 @@
 .showcase {
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
 }
+
 .showcase li {
   margin: 0 0 1.5em;
 }
+
 .showcase p {
   margin: 0;
+
+  &:last-child {
+    color: $grey-9;
+  }
 }
-.showcase p:last-child {
-  color: $grey-9;
-}
+
 .showcase small {
   display: block;
 }
+

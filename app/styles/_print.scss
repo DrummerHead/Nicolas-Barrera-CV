@@ -2,85 +2,95 @@
   @page {
     margin: 1cm;
   }
+
   * {
-    background: transparent !important;
-    color: $absolute-black !important;
-    box-shadow: none !important;
     text-shadow: none !important;
+    color: $absolute-black !important;
+    background: transparent !important;
+    box-shadow: none !important;
   }
+
   body {
-    font-family: sans-serif;
     font-size: 8.8pt;
     line-height: 1.3;
+    font-family: sans-serif;
   }
+
   a,
   a:visited {
-    text-decoration: none !important;
     border: none !important;
+    text-decoration: none !important;
   }
-  a[href^="http"]:after {
-    content: " \2014   " attr(href);
+
+  [href^='http']::after {
     font-size: 90%;
+    content: ' \2014   ' attr(href);
   }
+
   [role='main'] {
     padding-bottom: 0;
   }
+
   .vessel {
     padding: 0 .2em;
   }
+
   section {
     padding-bottom: 1em;
   }
+
   section aside {
     margin-top: .75em;
 
-    &:after {
+    &::after {
       background: transparent;
     }
   }
+
   .two-columns-print {
     column-count: 2;
     column-gap: 2.75em;
   }
+
   .two-columns-print > * {
     display: table;
-    -webkit-column-break-inside: avoid;
-        -ms-column-break-inside: avoid;
-            column-break-inside: avoid;
+    break-inside: avoid;
   }
+
   #dh-logo {
-    width: 2cm;
     position: absolute;
-    right: .2em;
     top: .7em;
+    right: .2em;
+    width: 2cm;
   }
-  #talks a:after,
-  [role='contentinfo'] a:after {
+
+  #talks a::after,
+  [role='contentinfo'] a::after {
     content: '';
   }
-  /*
-  dl,
-  .showcase li {
-    page-break-inside: avoid;
-  }
-  */
+
   dl {
     margin-bottom: .75em;
   }
-  [role="contentinfo"] {
-    font-size: .8em;
+
+  [role='contentinfo'] {
     padding: 0;
+    font-size: .8em;
   }
+
   .link-hub {
     display: flex;
     flex-flow: row nowrap;
   }
+
   .link-hub li {
     flex: 1 1 auto;
   }
+
   .screen {
     display: none !important;
   }
+
   .print {
     display: block;
   }

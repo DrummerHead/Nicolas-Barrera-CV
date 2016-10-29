@@ -1,26 +1,31 @@
 [role='banner'],
 [role='contentinfo'] {
-  background-color: $grey-14;
-  color: $grey-1;
   padding: .4em 0 .6em;
+  color: $grey-1;
+  background-color: $grey-14;
 }
+
 [role='banner'] h1 {
   margin: .25em 0;
   line-height: 1;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 600;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
 [role='banner'] h2 {
   margin: .4em 0;
+  border: none;
   font-size: 1.5em;
   line-height: 1.2;
-  border: none;
 }
+
 [role='banner'] aside {
   margin: .4em 0;
 }
+
 [role='banner'] a {
-  color: $grey-1;
   margin: .25em 0;
   line-height: 1.25;
+  color: $grey-1;
 }
+

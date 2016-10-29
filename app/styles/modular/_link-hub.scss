@@ -1,31 +1,35 @@
 .link-hub {
-  list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
+
 .link-hub li {
   margin: .25em 0;
 }
+
+.link-hub em {
+  font-style: normal;
+  color: $grey-1;
+}
+
 .link-hub a {
-  color: $grey-7;
-  text-decoration: none;
   border-bottom: 1px dotted $grey-14;
+  text-decoration: none;
+  color: $grey-7;
+
+  &:hover {
+    border-color: $cyan-4;
+    color: $cyan-4;
+
+    em {
+      color: $cyan-4;
+    }
+  }
 }
-.link-hub a:hover {
-  color: $cyan-4;
-  border-color: $cyan-4;
-}
+
 .link-hub strong {
   font-weight: normal;
-}
-.link-hub a:hover strong {
-}
-.link-hub em {
-  color: $grey-1;
-  font-style: normal;
-}
-.link-hub a:hover em {
-  color: $cyan-4;
 }
 
 @media #{$bravo} {
@@ -33,3 +37,4 @@
     margin: inherit;
   }
 }
+

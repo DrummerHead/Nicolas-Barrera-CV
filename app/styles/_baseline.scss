@@ -1,93 +1,97 @@
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
-  display: block;
-}
 html {
   font-size: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: $grey-13;
-  background-color: $grey-1;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
-  -webkit-font-smoothing: subpixel-antialiased;
+  color: $grey-13;
+  background-color: $grey-1;
 }
+
 body {
   margin: 0;
   font-size: 1em;
   line-height: 1.4;
 }
+
 a,
 strong,
 em {
   transition: 250ms ease-in-out all;
 }
+
 a {
   color: $cyan-9;
+
+  &:focus {
+    outline: dotted;
+  }
+
+  &:hover {
+    outline: 0;
+    color: $cyan-7;
+  }
+
+  &:active {
+    outline: 0;
+    color: $cyan-11;
+  }
 }
-a:focus {
-  outline: dotted;
-}
-a:hover {
-  outline: 0;
-  color: $cyan-7;
-}
-a:active {
-  outline: 0;
-  color: $cyan-11;
-}
+
 h1,
 h2 {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 300;
 }
+
 h2 {
-  font-size: 1.8em;
   border-bottom: 1px solid $grey-5;
+  font-size: 1.8em;
 }
+
 h3 {
   margin: 1.5em 0 .5em;
   font-size: 1.4em;
   font-weight: normal;
 }
+
 em {
   color: $grey-9;
 }
+
 ul,
 ol {
-  margin: 0 0 .5em 0;
+  margin: 0 0 .5em;
   padding: 0 0 0 .86em;
 }
+
 ul > li,
 ol > li {
   margin: 0 0 .1em;
 }
+
 dl {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 1.5em;
   border-left: .5em solid $grey-3;
   padding: 0 0 0 .5em;
 }
+
 dt {
   display: block;
   font-size: .8em;
   line-height: 1;
   color: $grey-11;
 }
+
 dd {
   display: block;
-  margin: 0 0 .5em 0;
+  margin: 0 0 .5em;
 }
+
 
 @media #{$bravo} {
   body {
     font-size: 1.2em;
   }
 }
+
