@@ -40,6 +40,18 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
+gulp.task('sass-lint', () =>
+  gulp.src('app/styles/**/*.scss')
+    .pipe($.sassLint({
+      configFile: '.sass-lint.yml',
+    }))
+    .pipe($.sassLint.format())
+    .pipe($.sassLint.failOnError())
+);
+
+gulp.task('scss-lint', ['sass-lint']);
+
+
 gulp.task('html-dates', () => {
   return gulp.src('./app/index.html')
     .pipe($.replace('{{experience-years}}', function(){
