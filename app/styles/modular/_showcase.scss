@@ -4,15 +4,26 @@
 }
 
 .showcase li {
-  margin: 0 0 1.5em;
+  margin: 0 0 1.6em;
+}
+
+.showcase strong {
+  display: block;
+  font-size: 1em;
+  line-height: 1.2;
 }
 
 .showcase p {
   margin: 0;
+  line-height: 1.2;
 
   &:last-child {
     color: $grey-9;
   }
+}
+
+p.showcase-description {
+  margin: .5em 0;
 }
 
 .showcase small {

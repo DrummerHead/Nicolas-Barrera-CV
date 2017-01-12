@@ -1,8 +1,7 @@
 .vessel {
   position: relative;
   margin: 0 auto;
-  padding: 0 1em;
-  transition: 500ms ease-in-out padding;
+  padding: 0 5vw;
 
   &::before,
   &::after {
@@ -15,6 +14,7 @@
   }
 }
 
+/*
 @media #{$alpha} {
   .vessel {
     padding: 0 6% 0 5%;
@@ -32,4 +32,4 @@
     padding: 0 4%;
   }
 }
-
+*/

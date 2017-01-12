@@ -1,11 +1,16 @@
 html {
   font-size: 100%;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  @extend %td;
   font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
   color: $grey-13;
   background-color: $grey-1;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 body {
@@ -17,7 +22,9 @@ body {
 a,
 strong,
 em {
-  transition: 250ms ease-in-out all;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  transition-property: color, border;
 }
 
 a {
@@ -38,15 +45,16 @@ a {
   }
 }
 
-h1,
 h2 {
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  font-weight: 300;
-}
-
-h2 {
-  border-bottom: 1px solid $grey-5;
-  font-size: 1.8em;
+  $font-color: $grey-11;
+  font-weight: 700;
+  color: $font-color;
+  border-bottom: .03em solid $font-color;
+  margin: 0 0 .55em;
+  padding: 0;
+  line-height: 1;
+  font-size: 2.4em;
+  @extend %td-extracondensed;
 }
 
 h3 {

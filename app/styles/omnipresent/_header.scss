@@ -5,27 +5,39 @@
   background-color: $grey-14;
 }
 
-[role='banner'] h1 {
-  margin: .25em 0;
-  line-height: 1;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  font-weight: 600;
-}
-
-[role='banner'] h2 {
-  margin: .4em 0;
-  border: none;
-  font-size: 1.5em;
-  line-height: 1.2;
-}
-
-[role='banner'] aside {
-  margin: .4em 0;
-}
-
 [role='banner'] a {
-  margin: .25em 0;
-  line-height: 1.25;
   color: $grey-1;
 }
 
+.title {
+  padding: .1em 0;
+  font-size: 4.6900vw;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.title h1 {
+  margin: .45em 0 0;
+  font-size: 2.1884em;
+  line-height: 1;
+  font-weight: 700;
+  @extend %td-expanded;
+}
+
+.title h2 {
+  margin: .12em 0 0;
+  font-size: 2.0937em;
+  border: none;
+  font-weight: 400;
+  line-height: 1;
+  color: $grey-1;
+  @extend %td;
+}
+
+.title aside {
+  margin: .12em 0 .7em;
+  font-size: 1em;
+  font-weight: 400;
+  @extend %td-expanded;
+  line-height: 1;
+}
