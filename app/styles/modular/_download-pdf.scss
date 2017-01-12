@@ -1,46 +1,39 @@
 #download-pdf {
+  @extend %td-condensed;
+  display: flex;
   position: absolute;
-  top: -2.5em;
-  right: 2%;
-  width: 5.5em;
+  right: 3.5vw;
+  bottom: .3rem;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  width: 2.7em + 4.2em;
   margin: 0;
-  padding: .1em 0 .1em 2.2em;
+  padding: .5em .4em;
   font-size: 1em;
   line-height: 1;
-  transform: rotate(-90deg);
-  transform-origin: 100% 100%;
-  font-weight: bold;
+  transition-duration: 250ms;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in;
+  font-weight: 700;
   text-decoration: none;
   color: $grey-2;
-  background-image: url('/images/file.png');
-  background-repeat: no-repeat;
-  background-position: .1em .1em;
-  background-size: 26px auto;
   opacity: 0;
   visibility: hidden;
+}
+
+#download-pdf svg {
+  flex: 0 0 2.7em;
+  fill: $grey-2;
+}
+
+#download-pdf span {
+  flex: 0 1 4.2em;
+  transform: translateY(.27em);
 }
 
 @media #{$alpha} {
   #download-pdf {
     opacity: 1;
     visibility: visible;
-  }
-}
-
-@media #{$bravo} {
-  #download-pdf {
-    top: -1.4em;
-    right: 4%;
-    padding: 1.6em 0 1em 4.5em;
-    font-size: 1.2em;
-    line-height: 1.2;
-    transform: rotate(0) scale(.6);
-    background-position: .5em .5em;
-    background-size: 77px auto;
-
-    &:hover {
-      top: .2em;
-      transform: rotate(0) scale(1);
-    }
   }
 }
