@@ -39,21 +39,14 @@
 
 @media #{$alpha} {
   .skill-list {
-    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 
   .skill-list > li {
-    $min-basis: 20%;
-    $even-remaining-basis: (100% - $min-basis) / 3;
+    flex: 0 0;
 
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3) {
-      flex-basis: $even-remaining-basis;
-    }
-
-    &:nth-child(4) {
-      flex-basis: $min-basis;
+    &:nth-child(n) {
+      flex-basis: auto;
     }
   }
 }

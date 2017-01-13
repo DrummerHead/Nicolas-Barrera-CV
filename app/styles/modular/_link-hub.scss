@@ -24,17 +24,10 @@
 
     em {
       color: $cyan-4;
+    }
   }
-}
 }
 
 .link-hub strong {
   font-weight: normal;
 }
-
-@media #{$bravo} {
-  .link-hub li {
-    margin: inherit;
-  }
-}
-
