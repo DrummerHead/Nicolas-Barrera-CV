@@ -15,15 +15,18 @@
     line-height: 1.3;
   }
 
-  a,
-  a:visited {
-    border: none !important;
-    text-decoration: none !important;
+  a {
+    &:visited {
+      border: none !important;
+      text-decoration: none !important;
+    }
   }
 
-  [href^='http']::after {
-    font-size: 90%;
-    content: ' \2014   ' attr(href);
+  [href^='http'] {
+    &::after {
+      font-size: 90%;
+      content: ' \2014   ' attr(href);
+    }
   }
 
   [role='main'] {
@@ -56,16 +59,18 @@
     break-inside: avoid;
   }
 
-  #dh-logo {
+  .dh-logo {
     position: absolute;
     top: .7em;
     right: .2em;
     width: 2cm;
   }
 
-  #talks a::after,
-  [role='contentinfo'] a::after {
-    content: '';
+  #talks a,
+  [role='contentinfo'] a {
+    &::after {
+      content: '';
+    }
   }
 
   dl {

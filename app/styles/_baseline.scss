@@ -1,6 +1,6 @@
 html {
-  font-size: 100%;
   @extend %td;
+  font-size: 100%;
   font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
@@ -23,8 +23,8 @@ a,
 strong,
 em {
   transition-duration: 250ms;
-  transition-timing-function: ease-in-out;
   transition-property: color, border;
+  transition-timing-function: ease-in-out;
 }
 
 a {
@@ -46,15 +46,15 @@ a {
 }
 
 h2 {
+  @extend %td-extracondensed;
   $font-color: $grey-11;
+  margin: 0 0 .55em;
+  border-bottom: .03em solid $font-color;
+  padding: 0;
+  font-size: 2.4em;
+  line-height: 1;
   font-weight: 700;
   color: $font-color;
-  border-bottom: .03em solid $font-color;
-  margin: 0 0 .55em;
-  padding: 0;
-  line-height: 1;
-  font-size: 2.4em;
-  @extend %td-extracondensed;
 }
 
 h3 {

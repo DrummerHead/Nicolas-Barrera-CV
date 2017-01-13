@@ -1,4 +1,4 @@
-#download-pdf {
+.download-pdf {
   @extend %td-condensed;
   display: flex;
   position: absolute;
@@ -21,18 +21,18 @@
   visibility: hidden;
 }
 
-#download-pdf svg {
+.download-pdf svg {
   flex: 0 0 2.7em;
   fill: $grey-2;
 }
 
-#download-pdf span {
+.download-pdf span {
   flex: 0 1 4.2em;
   transform: translateY(.27em);
 }
 
 @media #{$alpha} {
-  #download-pdf {
+  .download-pdf {
     opacity: 1;
     visibility: visible;
   }

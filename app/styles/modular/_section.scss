@@ -6,11 +6,10 @@ section {
   section {
     float: left;
     width: 48%;
-  }
 
-  section:nth-child(2n+1) {
-    clear: left;
-    margin-right: 4%;
+    &:nth-child(2n+1) {
+      clear: left;
+      margin-right: 4%;
+    }
   }
 }
-

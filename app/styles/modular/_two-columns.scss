@@ -7,10 +7,12 @@
   padding-left: 0;
 }
 
-.emulate-list > li::before {
-  margin: 0 .4em 0 0;
-  content: '\25cf';
-  vertical-align: calc(.055em);
+.emulate-list > li {
+  &::before {
+    margin: 0 .4em 0 0;
+    content: '\25cf';
+    vertical-align: calc(.055em);
+  }
 }
 
 .emulate-list li ul,
