@@ -3,13 +3,21 @@ section {
 }
 
 @media #{$charlie} {
+  $gutter: 4%;
+  $safari-fix: .09%;
+  $column-width: (100% - $gutter) / 2;
+
+  .sections {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
   section {
-    float: left;
-    width: 48%;
+    flex: 0 0 $column-width;
+    width: $column-width;
 
     &:nth-child(2n+1) {
-      clear: left;
-      margin-right: 4%;
+      margin-right: $gutter - $safari-fix;
     }
   }
 }
