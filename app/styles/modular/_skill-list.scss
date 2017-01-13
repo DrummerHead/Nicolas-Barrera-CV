@@ -7,9 +7,9 @@
 
 .skill-list,
 .skill-list ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .skill-list > li {
@@ -26,16 +26,34 @@
 }
 
 .skill-list strong {
+  @extend %td-extracondensed;
   display: block;
   font-size: 3em;
-  font-weight: 700;
   line-height: 1;
-  @extend %td-extracondensed;
+  font-weight: 700;
 }
 
 .skill-list ul {
   padding: 0 0 0 .2em;
 }
 
-.skill-list ul > li{
+@media #{$alpha} {
+  .skill-list {
+    flex-wrap: nowrap;
+  }
+
+  .skill-list > li {
+    $min-basis: 20%;
+    $even-remaining-basis: (100% - $min-basis) / 3;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      flex-basis: $even-remaining-basis;
+    }
+
+    &:nth-child(4) {
+      flex-basis: $min-basis;
+    }
+  }
 }
