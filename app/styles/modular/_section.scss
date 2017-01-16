@@ -9,15 +9,42 @@ section {
 
   .sections {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
+    height: calc(165rem - 14.6vw);
   }
 
   section {
-    flex: 0 0 $column-width;
+    flex: 0 1 auto;
     width: $column-width;
 
     &:nth-child(2n+1) {
       margin-right: $gutter - $safari-fix;
     }
+  }
+
+  $next-col: 3;
+
+  #skills {
+    order: 1;
+  }
+
+  #experience {
+    order: $next-col + 1;
+  }
+
+  #work-examples {
+    order: 2;
+  }
+
+  #education {
+    order: $next-col + 2;
+  }
+
+  #talks {
+    order: 3;
+  }
+
+  #get-in-touch {
+    order: $next-col + 3;
   }
 }

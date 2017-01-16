@@ -28,6 +28,15 @@
   };
 
 
+  var getTotalHeight = function (CSSSD) {
+    return ['paddingBottom', 'height', 'paddingTop'].map(function (prop) {
+      return parseFloat(CSSSD[prop]);
+    }).reduce(function (prev, curr) {
+      return prev + curr;
+    }, 0);
+  };
+
+
   // Wait for DOM load
   //
   document.addEventListener('DOMContentLoaded', function() {
@@ -39,6 +48,26 @@
     if($elapsed.length){
       $elapsed[0].textContent = calculateElapsed($elapsed[0].getAttribute('data-started'));
     }
+
+    var leftColCSSSDs = ['skills', 'work-examples', 'talks'].map(function (id) {
+      return window.getComputedStyle(document.getElementById(id));
+    });
+
+    var sections = document.querySelector('.sections');
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 1240) { // app/styles/_variables.scss > $charlie
+        var leftColHeight = leftColCSSSDs.map(function (CSSSD) {
+          return getTotalHeight(CSSSD);
+        }).reduce(function(prev, curr) {
+          return prev + curr;
+        }, 0);
+
+        sections.style.height = (Math.ceil(leftColHeight) + 10) + 'px';
+      } else {
+        sections.style.height = null;
+      }
+    });
   });
 
 })(window, document);
