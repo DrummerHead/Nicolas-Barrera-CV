@@ -1,4 +1,4 @@
-(function(window, document){
+(function(window, document) {
   'use strict';
 
   // Helper functions
@@ -9,7 +9,7 @@
 
   // Time elapsed in current job
   //
-  var calculateElapsed = function(startDate){
+  var calculateElapsed = function(startDate) {
     var miliInAMonthAverage = 2629741666;
 
     var currentJobStartDate = new Date(startDate).getTime();
@@ -28,17 +28,17 @@
   };
 
 
-  var getTotalHeight = function (CSSSD) {
-    return ['paddingBottom', 'height', 'paddingTop'].map(function (prop) {
+  var getTotalHeight = function(CSSSD) {
+    return ['paddingBottom', 'height', 'paddingTop'].map(function(prop) {
       return parseFloat(CSSSD[prop]);
-    }).reduce(function (prev, curr) {
+    }).reduce(function(prev, curr) {
       return prev + curr;
     }, 0);
   };
 
   var sizeLeftCol = function(leftColCSSSDs, sections) {
     if (window.innerWidth >= 1240) { // app/styles/_variables.scss > $charlie
-      var leftColHeight = leftColCSSSDs.map(function (CSSSD) {
+      var leftColHeight = leftColCSSSDs.map(function(CSSSD) {
         return getTotalHeight(CSSSD);
       }).reduce(function(prev, curr) {
         return prev + curr;
@@ -63,7 +63,7 @@
       $elapsed[0].textContent = calculateElapsed($elapsed[0].getAttribute('data-started'));
     }
 
-    var leftColCSSSDs = ['skills', 'work-examples', 'talks'].map(function (id) {
+    var leftColCSSSDs = ['skills', 'work-examples', 'talks'].map(function(id) {
       return window.getComputedStyle(document.getElementById(id));
     });
 
@@ -75,7 +75,7 @@
       sizeLeftCol(leftColCSSSDs, sections);
     });
 
-    window.addEventListener('resize', function () {
+    window.addEventListener('resize', function() {
       sizeLeftCol(leftColCSSSDs, sections);
     });
 
