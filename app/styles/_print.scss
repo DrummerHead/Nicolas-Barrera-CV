@@ -67,10 +67,17 @@
   }
 
   #talks a,
-  [role='contentinfo'] a {
+  [role='contentinfo'] a,
+  [role='banner'] a {
     &::after {
       content: '';
     }
+  }
+
+  [role='banner'] a {
+    display: block;
+    margin-bottom: .4em;
+    text-decoration: none;
   }
 
   dl {
