@@ -1,0 +1,50 @@
+@mixin font-face ($font-family, $file-name, $weight, $style) {
+  @font-face {
+    font-family: $font-family;
+    src: url('/fonts/#{$file-name}.eot');
+    src: url('/fonts/#{$file-name}?#iefix') format('embedded-opentype'),
+    url('/fonts/#{$file-name}.woff') format('woff'),
+    url('/fonts/#{$file-name}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+
+@include font-face('td-extracondensed', 'td-700-normal-extracondensed', 700, normal);
+//@include font-face('td-extracondensed', 'td-700-italic-extracondensed', 700, italic);
+
+@include font-face('td-condensed',      'td-400-normal-condensed',      400, normal);
+//@include font-face('td-condensed',      'td-400-italic-condensed',      400, italic);
+@include font-face('td-condensed',      'td-700-normal-condensed',      700, normal);
+//@include font-face('td-condensed',      'td-700-italic-condensed',      700, italic);
+
+//@include font-face('td',                'td-300-normal-normal',         300, normal);
+//@include font-face('td',                'td-300-italic-normal',         300, italic);
+@include font-face('td',                'td-400-normal-normal',         400, normal);
+@include font-face('td',                'td-400-italic-normal',         400, italic);
+@include font-face('td',                'td-700-normal-normal',         700, normal);
+//@include font-face('td',                'td-700-italic-normal',         700, italic);
+
+@include font-face('td-expanded',       'td-400-normal-expanded',       400, normal);
+@include font-face('td-expanded',       'td-700-normal-expanded',       700, normal);
+
+
+$fallback-font-stack: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+%td-extracondensed {
+  font-family: 'td-extracondensed', $fallback-font-stack;
+}
+
+%td-condensed {
+  font-family: 'td-condensed', $fallback-font-stack;
+}
+
+%td {
+  font-family: 'td', $fallback-font-stack;
+}
+
+%td-expanded {
+  font-family: 'td-expanded', $fallback-font-stack;
+}
+
