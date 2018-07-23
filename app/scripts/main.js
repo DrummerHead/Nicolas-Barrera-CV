@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     elapsedElem.textContent = calculateElapsed(elapsedElem.getAttribute('data-started'));
   }
 
-  const leftColCSSSDs = ['skills', 'work-examples', 'talks'].map(id =>
+  const leftColCSSSDs = ['skills', 'talks'].map(id =>
     window.getComputedStyle(document.getElementById(id))
   );
   const containerElem = document.querySelector('.sections');
