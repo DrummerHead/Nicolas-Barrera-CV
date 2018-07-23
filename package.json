@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "serve": "gulp serve",
-    "build": "gulp build"
+    "start": "gulp serve",
+    "build": "gulp build",
+    "lintjs": "prettier --single-quote --trailing-comma es5 --write \"app/scripts/*.js\""
   },
   "author": "DrummerHead",
   "license": "ISC",
@@ -39,6 +41,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "htmlhint-stylish": "^1.0.3",
+    "prettier": "1.13.7",
     "rollupify": "^0.3.5",
     "uglifyify": "^3.0.4",
     "vinyl-buffer": "^1.0.0",
