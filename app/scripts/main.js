@@ -4,7 +4,9 @@ import sizeLeftCol from './sizeLeftCol';
 document.addEventListener('DOMContentLoaded', () => {
   const elapsedElem = document.getElementById('elapsed');
   if (elapsedElem) {
-    elapsedElem.textContent = calculateElapsed(elapsedElem.getAttribute('data-started'));
+    elapsedElem.textContent = calculateElapsed(
+      elapsedElem.getAttribute('data-started')
+    );
   }
 
   const leftColCSSSDs = ['skills', 'talks'].map(id =>

@@ -1,9 +1,7 @@
 const dateToString = (date, kind) =>
-  (date
-    ? `${date} ${kind}${date > 1 ? 's' : ''}`
-    : '');
+  date ? `${date} ${kind}${date > 1 ? 's' : ''}` : '';
 
-const calculateElapsed = (startDate) => {
+const calculateElapsed = startDate => {
   const miliInAMonthAverage = 2629741666;
 
   const currentJobStartDate = new Date(startDate).getTime();
@@ -14,7 +12,10 @@ const calculateElapsed = (startDate) => {
   const elapsedYears = Math.floor(elapsedMonthsTotal / 12);
   const elapsedMonths = elapsedMonthsTotal % 12;
 
-  return `${dateToString(elapsedYears, 'year')} ${dateToString(elapsedMonths, 'month')}`;
+  return `${dateToString(elapsedYears, 'year')} ${dateToString(
+    elapsedMonths,
+    'month'
+  )}`;
 };
 
 export default calculateElapsed;
