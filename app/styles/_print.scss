@@ -38,7 +38,8 @@
   }
 
   section {
-    padding-bottom: 1em;
+    padding-bottom: 3em;
+    break-inside: avoid;
   }
 
   section aside {
@@ -49,14 +50,23 @@
     }
   }
 
-  .two-columns-print {
-    column-count: 2;
+  .two-columns-print,
+  .three-columns-print {
     column-gap: 2.75em;
   }
 
-  .two-columns-print > * {
+  .two-columns-print > *,
+  .three-columns-print > * {
     display: table;
     break-inside: avoid;
+  }
+
+  .two-columns-print {
+    column-count: 2;
+  }
+
+  .three-columns-print {
+    column-count: 3;
   }
 
   .dh-logo {
@@ -98,6 +108,21 @@
   .link-hub li {
     flex: 1 1 auto;
   }
+
+  .showcase strong {
+    font-size: 1.2em;
+    margin-bottom: .2em;
+  }
+
+  .showcase small {
+    display: inline;
+
+    &::before {
+      margin: 0 .4em 0 .2em;
+      content: '\b7';
+    }
+  }
+
 
   .screen {
     display: none !important;
