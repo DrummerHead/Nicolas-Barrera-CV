@@ -4,16 +4,23 @@ import sizeLeftCol from './sizeLeftCol';
 const startedWorking = '2007-03-01';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const elapsedElem = document.getElementById('elapsed');
-  if (elapsedElem) {
-    elapsedElem.textContent = elapsedToString(
-      calculateElapsed(elapsedElem.getAttribute('data-started'))
+  // Time calculations
+  //
+  const presentJobElapsedElem = document.getElementById('elapsed');
+  if (presentJobElapsedElem) {
+    presentJobElapsedElem.textContent = elapsedToString(
+      calculateElapsed(presentJobElapsedElem.getAttribute('data-started'))
     );
   }
 
-  const yearsExpElem = document.getElementById('expYears');
-  yearsExpElem.textContent = calculateElapsed(startedWorking).years;
+  document.getElementById('expYears').textContent = calculateElapsed(
+    startedWorking
+  ).years;
 
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+  // Layout tweaking
+  //
   const leftColCSSSDs = ['skills', 'talks'].map(id =>
     window.getComputedStyle(document.getElementById(id))
   );
