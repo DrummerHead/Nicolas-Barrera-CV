@@ -1,13 +1,18 @@
-import calculateElapsed from './calculateElapsed';
+import calculateElapsed, { elapsedToString } from './calculateElapsed';
 import sizeLeftCol from './sizeLeftCol';
+
+const startedWorking = '2007-03-01';
 
 document.addEventListener('DOMContentLoaded', () => {
   const elapsedElem = document.getElementById('elapsed');
   if (elapsedElem) {
-    elapsedElem.textContent = calculateElapsed(
-      elapsedElem.getAttribute('data-started')
+    elapsedElem.textContent = elapsedToString(
+      calculateElapsed(elapsedElem.getAttribute('data-started'))
     );
   }
+
+  const yearsExpElem = document.getElementById('expYears');
+  yearsExpElem.textContent = calculateElapsed(startedWorking).years;
 
   const leftColCSSSDs = ['skills', 'talks'].map(id =>
     window.getComputedStyle(document.getElementById(id))
