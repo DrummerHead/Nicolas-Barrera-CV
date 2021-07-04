@@ -38,6 +38,10 @@ section {
 
   #education {
     order: $next-col + 2;
+
+    p {
+      text-shadow: 1px 1px 0 $grey-1;
+    }
   }
 
   #talks {
@@ -46,5 +50,9 @@ section {
 
   #get-in-touch {
     order: $next-col + 3;
+
+    p {
+      text-shadow: 1px 1px 0 $grey-1;
+    }
   }
 }
