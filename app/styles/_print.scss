@@ -11,7 +11,7 @@
   }
 
   body {
-    font-size: 8.6pt;
+    font-size: 11pt;
     line-height: 1.3;
   }
 
@@ -82,6 +82,10 @@
     &::after {
       content: '';
     }
+  }
+
+  #experience {
+    font-size: 10pt;
   }
 
   [role='banner'] a {
